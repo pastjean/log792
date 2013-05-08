@@ -1,9 +1,15 @@
+# Ignore Dirs
+Articles/*
+Gabarits/*
+
+# OSX SHIT
 .DS_Store
 
 # Latex generated
 *.aux
 *.log
 *.toc
+*.blg
 *.bbl
 *.bst
 *.lof
