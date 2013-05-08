@@ -15,5 +15,5 @@ Projets
 Le présent projet regroupe seulement les document demandés par le cours LOG792, pour les autres documents et projets liés
 
 
-- [Fujin](/pastjean/fujin) : La carte électronique, code et hardware
+- [Fujin](https://github.com/pastjean/fujin) : La carte électronique, code et hardware
 
