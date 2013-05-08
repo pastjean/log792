@@ -1,5 +1,5 @@
 LOG792 - Optimisation des paramètres d’une éolienne en mouvement
-================================̀============́====================
+================================================================
 
 Projet de fin d'études.
 
