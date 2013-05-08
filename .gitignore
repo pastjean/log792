@@ -1,0 +1,10 @@
+.DS_Store
+
+# Latex generated
+*.aux
+*.log
+*.toc
+*.bbl
+*.bst
+*.lof
+*.out
