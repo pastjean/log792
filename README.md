@@ -1,7 +1,7 @@
-LOG792 - Optimisation des paramètres d’une éolienne en mouvement
-================================================================
+Optimisation des paramètres d’une éolienne en mouvement
+=======================================================
 
-Projet de fin d'études.
+Cours : LOG792 - Projet de fin d'études.
 
 Résumé
 ------
