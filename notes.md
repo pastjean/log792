@@ -12,3 +12,6 @@ Choix du language d'implémentation de l'algorithme génétique en fonction de l
 Pourquoi haskell
 - Type safe, 
 aucun (presque ) runtime error (grâce au safe typing)
+
+
+REVUE DE LITTÉRATURE dans le rapport final
