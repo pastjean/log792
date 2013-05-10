@@ -24,6 +24,7 @@
 \usepackage{tabularx}
 \usepackage{multirow}
 \usepackage{lastpage}
+\usepackage{longtable}
 %\usepackage[left=3.5cm,right=3.5cm,top=2cm,bottom=2cm]{geometry} % Change margins
 
 \hypersetup{colorlinks=true,allcolors=black}
@@ -31,6 +32,7 @@
 \setmainfont{Sorts Mill Goudy}
 \pagenumbering{arabic}
 \urlstyle{same}
+\tabulinesep =1mm
 %----------------------------------------------------------------------------------------
 %	Header
 %----------------------------------------------------------------------------------------
@@ -39,12 +41,13 @@
 
    \lhead{\helv \parbox[b]{3.5cm}{ÉTS - Département de génie logiciel et des TI}}
    \chead{\helv \parbox[b]{7cm}{\centering LOG792 - Proposition - Optimisation des paramètres d’une éolienne en mouvement}}
-\rhead{\helv \today \\ \thepage}
+\rhead{\helv \today \linebreak \thepage}
 \lfoot{}
 \cfoot{}
 \rfoot{}
 
 \setlength{\headwidth}{\textwidth}
+\setlength{\headheight}{23pt}
 % \setlength{\headheight}{1.2cm}
 % \fancyhead[L]{
 % \begin{tabularx}{\headwidth}{|cm{3.5cm}|X|l|}
@@ -147,7 +150,7 @@ Dr. Christian \textsc{Desrosiers}\\
 \addcontentsline{toc}{section}{Résumé}
 \end{center}
 
-Le club étudiant Chinook, afin de continuer son succès en compétition améliore constament son éolienne. L'ajout d'un système mécanique et électronique de contrôle de l'angle d'attaque de celle-ci ainsi que du ratio de transmission permettron d'augmenter les performances du véhicule. Afin de commander ces nouveaux systèmes, un algorithme de contrôle doit être développé afin de géré ces systèmes. Le présent projet propose donc de caractériser l'éolienne puis de créer un tel algorithme de contrôle de l'éolienne à l'aide des algorithmes génétiques.
+Le club étudiant Chinook, afin de continuer son succès en compétition améliore constamment son éolienne. L'ajout d'un système mécanique et électronique de contrôle de l'angle d'attaque de celle-ci ainsi que du ratio de transmission permettra d'augmenter les performances du véhicule. Afin de commander ces nouveaux systèmes, un algorithme de contrôle doit être développé afin de gérer ces systèmes. Le présent projet propose donc de caractériser l'éolienne puis de créer un tel algorithme de contrôle de l'éolienne à l'aide des algorithmes génétiques.
 
 \vspace*{\fill}
 \clearpage
@@ -174,7 +177,7 @@ Le club étudiant Chinook, afin de continuer son succès en compétition amélio
 
 \section{Problématique et contexte}
 
-Le véhicule éolien Chinook\ref{fig:chinookHall} de l'ÉTS est un regroupement de personnes\footnote{\url{http://chinookets.com}} qui analyse, conçoivent et construisent un véhicule propulsée par une éolienne. Le véhicule participe, chaque année, depuis deux ans à une compétition de véhicules de ce type qu'ils ont remportés l'année dernière. Cette année le véhicule doit être améliorer afin de pouvoir rester compétitif. Pour ce faire un système électronique de controle de l'angle d'attaque des pales de l'éolienne sera installé. La transmission du véhicule sera aussi modifiée afin de pouvoir être contrôllée électroniquement. 
+Le véhicule éolien Chinook\ref{fig:chinookHall} de l'ÉTS est un regroupement de personnes\footnote{\url{http://chinookets.com}} qui analysent, conçoivent et construisent un véhicule propulsée par une éolienne. Le véhicule participe, chaque année, depuis deux ans à une compétition de véhicules de ce type qu'ils ont remportés l'année dernière. Cette année le véhicule doit être améliorer afin de pouvoir rester compétitif. Pour ce faire un système électronique de controle de l'angle d'attaque des pales de l'éolienne sera installé. La transmission du véhicule sera aussi modifiée afin de pouvoir être contrôllée électroniquement. 
 
 \begin{figure}[H]
   \centering
@@ -209,7 +212,7 @@ Premièrement, le facteur de conversion de l'éolienne ($C_p$) doit être caract
 
 Lorsque le comportement de l'éolienne sera caractérisé, un modèle mathématique de contrôle de l'éolienne sera généré à l'aide d'un algorithme génétique. La méthode décrite dans \cite{Ouissam12} sera améliorée et adaptée afin de convenir au contexte d'utilisation du Chinook et cette méthode sera utilisée afin de générer le modèle mathématique de contrôle.
 
-Suite à la création de la formule de contrôle et à partir de l'architecture électrique et logiciel [Annexe \ref{fig:archELE}] du Chinook 3, on peut inclure ces équations à l'intérieur du Chinook dans la carte électronique de calcul [figure \ref{fig:carteElec}]. Les équations donneront en sortie: l'angle d'attaque et le ratio de transmission à appliquer. Ces données seront envoyés aux systèmes qui contrôlent les moteurs.
+Suite à la création de la formule de contrôle et à partir de l'architecture électrique et logiciel [Annexe \ref{sec:archELE}] du Chinook 3, on peut inclure ces équations à l'intérieur du Chinook dans la carte électronique de calcul [figure \ref{fig:carteElec}]. Les équations donneront en sortie: l'angle d'attaque et le ratio de transmission à appliquer. Ces données seront envoyés aux systèmes qui contrôlent les moteurs.
 
 \begin{figure}[H]
   \centering
@@ -233,17 +236,17 @@ En résumé, le projet consiste en :
 \end{itemize}
 
 \section{Livrables et planification}
+
 \subsection{Description des atéfacts}
 
-\begin{tabu} to \linewidth {X[1,l]X[2,l]}
-  \bfseries Artéfact & Description \\ \hline
+\begin{longtabu} to \linewidth {X[1,l]X[2,l]}
+  Artéfact & Description \\ \hline
   Proposition de projet & Le présent document qui décris sommairement en quoi consistera le projet, ça planification et la façon dont il sera exécuté.\\ \hline
   Rapport d'étape & Document décrivant l'avancement du projet et la façon dont le projet est analyser et conçu \\ \hline
   Rapport final & Document décrivant le projet dans son ensemble.\\ \hline
   Présentation & Préparation et mise en page de la présentation du projet au département de Génie Logiciel et des TI à la fin de la session\\ \hline
   Article & Article scientifique décrivant la méthode utilisée pour caractériser l'éolienne et créer l'algorithme d'optimisation\\ \hline
-  Spécifications & Documents de spécifications des différents sous-projets que ce projet génère.\\
-  \hline
+  Spécifications & Documents de spécifications des différents sous-projets que ce projet génère.\\ \hline
   Carte électronique: implémentation de base & Implémentation permettant de faire fonctionner tout les composantes de la carte électronique et prêt à accueillir la fonction de calcul. Cet implémentation permet de faire fonctionner les modules de communication soit le XBEE, le module CAN et le module de USB-SERIAL. L'implémentation permettra aussi de faire fonctionner le module de mémoire morte (EEPROM), le module de surveillance électrique et le module d'horloge (realtime clock).\\ \hline
   Carte électronique: Logiciel d'optimisatione & Implémentation du logiciel d'optimisation génétique à l'intérieur de la carte électronique en language C\\ \hline
   Programme de caractérisation de l'éolienne & Programme d'algorithme génétique faisant une opération de Curve-fitting \\ \hline
@@ -251,12 +254,14 @@ En résumé, le projet consiste en :
   Algorithme génétique d'optimisation & Algorithme permettant d'optimiser les paramètres de l'éolienne selon des conditions quasi réelles d'opération \\ \hline
   Données de banc d'essai & Données récoltés en fixant certains paramètres de l'éolienne. \\ \hline
   Algorithme génétique de caractérisation de l'éolienne & Algorithme permettant de caractérisé la fonction de puissance de l'éolienne en fonction des données récoltés \\ \hline 
-\end{tabu}
+  Outils de simulation \& de visualisation & Outils mathématiques et algorithmiques qui permettent de simuler des conditions fictive et de voir les performances de l'éolienne et des algorithmes selon ces conditions\\
+  Planification de projet & La planification de projet initiale est produite à l'intérieur de ce document. Elle ensuite continuée sur la plateforme Trello (Voir la section \ref{sec:techoutils}) \\
+   Environnement de développement & L'environnement de développement est l'ensemble des outils utilisés lors de ce projet. L'environnement de développement permet de bien intégrer les différents outils entre eux.
+\end{longtabu}
 
 \subsection{Planification}
-
 \begin{tabu} to \linewidth {Xlll}
-  \bfseries Tâche & Début - Fin & Effort\\ \hline
+  \bfseries Tâche & Début - Fin & Effort estimé\\ \hline
   Fiche de renseignement  & 26 Mars 2013 & 1h \\
   Proposition de projet   & 6 Mai 2013 - 12 Mai 2013 & 15h \\
   Rapport Étape           & 12 Mai 2013 - 21 Juin 2013 & 25h\\
@@ -266,22 +271,22 @@ En résumé, le projet consiste en :
   Planification du projet & 8 Mai 2013 - 31 Juillet 2013   & 5h\\
   Compétition Racing Aeolus 2013 & 17 Août & \\
   \hline
-  Rencontre avec professeur superviseur & (Au besoin) & \\
+  Rencontre avec professeur superviseur & (Au besoin) & 3h\\
   \hline
   Mise en place de l'environnement de développement & 12 Mai - 18 Mai & 5h \\
-  Spécification du projet & 12 Mai - 1 Juillet & 15h \\
+  Spécification du projet & 12 Mai - 1 Juin & 15h \\
   \hline
-  Programme de caractérisation de l'éolienne & & \\
-  Récolte de données                         & & \\
-  Caractérisation de l'éolienne              & & \\
+  Programme de caractérisation de l'éolienne & 12 Mai - 30 Mai & 15h\\
+  Récolte de données                         & Mi-juin & 12h \\
+  Caractérisation de l'éolienne              & Mi-juin & 6h\\
   \hline
-  Outils de simulation                   & & \\
-  Programme génétique d'optimisation    & & \\
+  Outils de simulation \& de visualisation   & 12 Mai & 15h \\
+  Programme génétique d'optimisation         & 1 Juin - 15 Juillet & 30h \\
   \hline
   Carte électronique: implémentation de base    & 10 mars 2013 - 20 Mai 2013 & 30h \\
   Carte électronique: ajout du logiciel d'optimisation & 1 Juillet 2013 - 31 Juillet 2013 & 20h \\
   \hline
-  Tests sur route & & \\
+  Tests sur route & Mi-Juillet & 3 fois 6h \\
   \hline
 \end{tabu}
 
@@ -338,8 +343,8 @@ La façon de calculer l'impact des risques et leur probabilités est faite selon
   \item Mathematica sera utilisé
 \end{itemize}
 
-\bibliographystyle{anotate}
-%\bibliographystyle{apalike}
+%\bibliographystyle{anotate}
+\bibliographystyle{apalike}
 %\bibliographystyle{plainnat}
 %\bibliographystyle{development}
 \bibliography{bibliography}
@@ -356,7 +361,7 @@ La façon de calculer l'impact des risques et leur probabilités est faite selon
 
 
 \section{Architecture Électrique du Chinook 3}
-\label{fig:archELE}
+\label{sec:archELE}
 \includegraphics[height=1\textwidth,angle=90]{images/Architecture_ÉLÉ-LOG.pdf}
 
 \clearpage
