@@ -1,0 +1,122 @@
+\documentclass[10pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	Packages and configuration
+%----------------------------------------------------------------------------------------
+
+\usepackage[T1]{fontenc}
+\usepackage{ucs} % Encoding errors
+\usepackage[francais]{babel}
+\usepackage{xltxtra} % More XELATEX
+\usepackage{graphicx} % Permits to include some pictures
+\usepackage{fontspec}
+\usepackage{url} % Url links
+\usepackage{float} % Adds options to floats like H
+\usepackage[ocgcolorlinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{metalogo}
+\usepackage[titletoc]{appendix}
+\usepackage{pdflscape} % Pour des pages au format paysage
+\usepackage{enumitem}  % Pour pouvoir choisir le symbole de itemize : 
+                       % \begin{itemize}[label={$\bullet$}]
+\usepackage{tabu}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{lastpage}
+\usepackage{multicol}
+\usepackage{wrapfig}
+\usepackage{longtable}
+\usepackage[left=3.5cm,right=3.5cm,top=2cm,bottom=2cm]{geometry} % Change margins
+
+\hypersetup{colorlinks=true,allcolors=black}
+
+\setmainfont{Sorts Mill Goudy}
+% \setmainfont[BoldFont={Exo},
+%   BoldFeatures={Weight=4,Scale=0.9}]{Sorts Mill Goudy}
+
+% \usepackage{sectsty}
+% \allsectionsfont{
+%   \fontspec[BoldFont={Sorts Mill Goudy}]{Sorts Mill Goudy}}
+\pagenumbering{arabic}
+\urlstyle{same}
+\tabulinesep =1mm
+%----------------------------------------------------------------------------------------
+%	Header
+%----------------------------------------------------------------------------------------
+
+\newcommand{\helv}{%
+   \fontsize{9}{11}\selectfont}
+
+   \lhead{\helv \parbox[b]{3.0cm}{ÉTS - Département de génie logiciel et des TI}}
+   \chead{\helv \parbox[b]{7cm}{\centering LOG792 - Rapport d'étape - Optimisation des paramètres d’une éolienne en mouvement}}
+\rhead{\helv \today \linebreak \thepage}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+\setlength{\headwidth}{\textwidth}
+\setlength{\headheight}{23pt}
+
+\renewcommand{\headrulewidth}{0.4pt}
+%\renewcommand{\footrulewidth}{0.4pt}
+
+%----------------------------------------------------------------------------------------
+%	Document
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\pagestyle{fancy}
+
+%----------------------------------------------------------------------------------------
+%	Page titre
+\input{1-title}
+
+%----------------------------------------------------------------------------------------
+%	Table des matières
+\input{2-tables}
+\begin{multicols}{2}
+%----------------------------------------------------------------------------------------
+%	Abstract
+\input{3-abstract}
+
+%----------------------------------------------------------------------------------------
+%	Intro
+\input{4-intro}
+
+%----------------------------------------------------------------------------------------
+%	Methodologie
+\input{5-metho}
+
+%----------------------------------------------------------------------------------------
+%	Resultats
+\input{6-resultats}
+
+\end{multicols}
+%----------------------------------------------------------------------------------------
+%	Resultats
+\input{7-planif}
+
+\bibliographystyle{annotate}
+%\bibliographystyle{apalike}
+%\bibliographystyle{plainnat}
+%\bibliographystyle{development}
+\bibliography{bibliography}
+\addcontentsline{toc}{section}{Références}
+
+%\clearpage
+
+%----------------------------------------------------------------------------------------
+%	Annexes
+%----------------------------------------------------------------------------------------
+\section*{Annexes}
+\addcontentsline{toc}{section}{Annexes}
+\begin{appendices}
+
+
+
+\end{appendices}
+
+\end{document}
+
+

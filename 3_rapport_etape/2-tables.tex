@@ -1,0 +1,17 @@
+\section*{Table des matières}
+% \addcontentsline{toc}{section}{Table des matières}
+\renewcommand{\contentsname}{Table des matières}
+\makeatletter
+\renewcommand{\tableofcontents}{\@starttoc{toc}%
+}
+\makeatother
+\begin{multicols}{2}
+\tableofcontents
+\end{multicols}
+\phantomsection
+%\listoffigures
+%\addcontentsline{toc}{section}{Table des figures}
+%\clearpage
+
+% \vspace*{\fill}
+% \begin{center}
