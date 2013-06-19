@@ -19,15 +19,25 @@ Pour améliorer le véhicule, permettre de à l'équipe de bien performer et res
 
 Afin de pouvoir contrôller ces systèmes électroniques, des modèles de contrôle et d'optimisation de la puissance de l'éolienne doivent être créés. Les modèles disponibles sur les éoliennes statique peuvent s'appliquer pour une éolienne en mouvement mais doivent être modifiés afin de prendre en compte plusieurs facteurs.
 
-%--------------------------------------------------------
-%--TODO: ------------------------------------------------
-... réciter les papers ici
-%--------------------------------------------------------
-%--------------------------------------------------------
+\citet{LaksPao} décris plusieurs méthodes de contrôle des éoliennes mais la plupart de ces méthodes ne vont pas chercher le point maximum de puissance, elle vont plutôt chercher un point stable de contrôle qui permet d'offrir une puissance stable pour les générateurs électrique. \citet{Jelavic05} va chercher le point maximum de puissance de l'éolienne, mais seulement dans le cas oùla vitesse du vent est sous la vitesse prescrite de l'éolienne. \citet{Ouissam12} dans son article utilise un algorithme génétique couplé a un algorithme flou (fuzzy control system), la méthode semble fonctionner mais celui-ci ne semble pas prendre en compte les changements de vitesse de rotation de l'éolienne et les variations de la vitesse du vent.
 
 % subsection Problématique et contexte (end)
 \subsection{Objectifs} % (fold)
 \label{sub:Objectifs}
+
+
+Le présent projet à pour but d'ammener l'éolienne du Chinook 3 [figure: \ref{fig:matRotor}] à opérer dans les conditions et à l'aide des paramètres d'opérations les plus optimales possibles. Pour ce faire, l'éolienne doit être caractérisé, un modèle de contrôle et d'optimisation de l'angle d'attaque ($\beta$) des pales et du ratio de transmission qui affecte la vitesse de rotation de l'éolienne ($\omega$) doit être conçu, analysé puis ce modèle doit être implanté dans le logiciel de la carte électronique de calcul.
+
+Le système de contrôle pourra, à tout moment et selon certaines conditions, changer l'angle d'attaque des pales ($\beta$) où le ratio transmission afin d'atteindre les performances optimales de l'éolienne dans les conditions de vitesse du véhicule et de vitesse du vent.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{images/mat_rotor_annote.jpg}
+  \caption[Mat et Rotor du Chinook 3]{Rendu 3D du mat et du rotor du Chinook 3}
+  \label{fig:matRotor}
+\end{figure}
+
+Un tel modèle ainsi opérationnel dans les systèmes de contrôle du Chinook permettra au véhicule d'atteindre de meilleures vitesses et ce plus rapidement tout en permettant de conserver les vitesses atteintes et de mieux résister aux turbulences environnementales que par les années passées.
 
 % subsection Objectifs du projet (end)
 
