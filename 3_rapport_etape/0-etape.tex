@@ -11,8 +11,8 @@
 \usepackage{graphicx} % Permits to include some pictures
 \usepackage{fontspec}
 \usepackage{url} % Url links
-\usepackage{float} % Adds options to floats like H
 \usepackage[ocgcolorlinks]{hyperref}
+\usepackage{float} % Adds options to floats like H
 \usepackage{fancyhdr}
 \usepackage{metalogo}
 \usepackage[titletoc]{appendix}
@@ -98,6 +98,11 @@
 %	Resultats
 \input{7-planif}
 
+
+%----------------------------------------------------------------------------------------
+%	Bibliographie
+\nocite{*}
+
 \bibliographystyle{annotate}
 %\bibliographystyle{apalike}
 %\bibliographystyle{plainnat}
@@ -109,12 +114,11 @@
 
 %----------------------------------------------------------------------------------------
 %	Annexes
-%----------------------------------------------------------------------------------------
 \section*{Annexes}
 \addcontentsline{toc}{section}{Annexes}
 \begin{appendices}
 
-
+  \input{8-appendices}
 
 \end{appendices}
 

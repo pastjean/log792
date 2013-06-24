@@ -1,14 +1,108 @@
 \section{Planification} % (fold)
 \label{sec:Planification}
 
-% TODO: Mettre la planification ici0
+L'état d'avancement du projet peut être consulté sur Trello à l'adresse suivante : 
+\\
+\url{https://trello.com/board/wind-apprentice/518a9dfd2d4ebe4e1a000b36}
 
+
+\begin{figure}[H]
+\label{fig:planif}
+\centering
+\includegraphics[width=\textwidth]{images/avancement.jpg}
+\caption{Planification du projet sur Trello}
+\end{figure}
+
+\begin{tabu} to \linewidth {Xlll}
+  \textbf{Tâche} & \textbf{Début - Fin} & \textbf{Effort estimé}\\ \hline
+  Fiche de renseignement  & 26 Mars 2013 & 1h \\
+  Proposition de projet   & 6 Mai 2013 - 12 Mai 2013 & 15h \\
+  Rapport Étape           & 12 Mai 2013 - 21 Juin 2013 & 25h\\
+  Rapport Final           & 21 Juin 2013 - 31 Juillet 2013 & 30h\\
+  Présentation            & 21 Juin 2013 - 31 Juillet 2013 & 5h \\
+  Planification du projet & 8 Mai 2013 - 31 Juillet 2013   & 5h\\
+  Compétition Racing Aeolus 2013 & 17 Août & \\
+  \hline
+  Rencontre avec professeur superviseur & (Au besoin) & 3h (1h)\\
+  Rencontre avec François Dubé, étudiant de maitrise spécialisé dans le contrôle des éoliennes
+  & & 2h \\
+  \hline
+  Mise en place de l'environnement de développement & 12 Mai - 18 Mai & 5h \\
+  Spécification du projet & 12 Mai - 1 Juin & 15h \\
+  \hline
+  Programme de caractérisation de l'éolienne & 12 Mai - 30 Mai & 15h\\
+  Récolte de données                         & Mi-juin & 12h \\
+  Caractérisation de l'éolienne              & Mi-juin & 6h\\
+  \hline
+  Outils de simulation \& de visualisation   & 12 Mai & 30h \\
+  Programme génétique d'optimisation         & 1 Juin - 15 Juillet & 30h \\
+  \hline
+  Carte électronique: implémentation de base    & 10 mars 2013 - 20 Mai 2013 & 30h \\
+  Carte électronique: ajout du logiciel d'optimisation & 1 Juillet 2013 - 31 Juillet 2013 & 20h \\
+  \hline
+  Tests sur route & Mi-Juillet & 3 fois 6h \\
+  \hline
+\end{tabu}
 \subsection{Artéfacts} % (fold)
 \label{sub:artefacts}
+
+\begin{longtabu} to \linewidth {X[1,l]X[2,l]}
+  \textbf{Artéfact} & \textbf{Description} \\ \hline
+  Proposition de projet & Le présent document qui décris sommairement en quoi consistera le projet, ça planification et la façon dont il sera exécuté.\\ \hline
+  Rapport d'étape & Document décrivant l'avancement du projet et la façon dont le projet est analyser et conçu \\ \hline
+  Rapport final & Document décrivant le projet dans son ensemble.\\ \hline
+  Présentation & Préparation et mise en page de la présentation du projet au département de Génie Logiciel et des TI à la fin de la session\\ \hline
+  Article & Article scientifique décrivant la méthode utilisée pour caractériser l'éolienne et créer l'algorithme d'optimisation (intégré dans le rapport)\\ \hline
+  Spécifications & Documents de spécifications des différents sous-projets que ce projet génère. Sous forme de *readme* dans chaque sous-projet\\ \hline
+  Carte électronique: implémentation de base & Implémentation permettant de faire fonctionner tout les composantes de la carte électronique et prêt à accueillir la fonction de calcul. Cet implémentation permet de faire fonctionner les modules de communication soit le XBEE, le module CAN et le module de USB-SERIAL. L'implémentation permettra aussi de faire fonctionner le module de mémoire morte (EEPROM), le module de surveillance électrique et le module d'horloge (realtime clock).\\ \hline
+  Carte électronique: Logiciel d'optimisatione & Implémentation du logiciel d'optimisation génétique à l'intérieur de la carte électronique en language C\\ \hline
+  Programme de caractérisation de l'éolienne & Programme d'algorithme génétique faisant une opération de Curve-fitting \\ \hline
+  Outils de simulation & Outils mathématiques permettant de simuler le fonctionnement de l'éolienne dans des conditions réelles. \\ \hline
+  Algorithme génétique d'optimisation & Algorithme permettant d'optimiser les paramètres de l'éolienne selon des conditions quasi réelles d'opération \\ \hline
+  Données de banc d'essai & Données récoltés en fixant certains paramètres de l'éolienne. \\ \hline
+  Algorithme génétique de caractérisation de l'éolienne & Algorithme permettant de caractérisé la fonction de puissance de l'éolienne en fonction des données récoltés \\ \hline 
+  Outils de simulation \& de visualisation & Outils mathématiques et algorithmiques qui permettent de simuler des conditions fictive et de voir les performances de l'éolienne et des algorithmes selon ces conditions\\
+  Planification de projet & La planification de projet initiale est produite à l'intérieur de ce document. Elle ensuite continuée sur la plateforme Trello (Voir la section \ref{sec:techoutils}) \\
+   Environnement de développement & L'environnement de développement est l'ensemble des outils utilisés lors de ce projet. L'environnement de développement permet de bien intégrer les différents outils entre eux.
+\end{longtabu}
 
 % subsection Description des artéfacts (end)
 \subsection{Risques} % (fold)
 \label{sub:Risques}
+
+\subsubsection{Risques et mitigation de ces risques}
+
+\begin{table}[H]
+  \begin{center}
+\begin{tabu} to \linewidth {X[1.5,l]|X[3,l]}
+  \textbf{Risque} & \textbf{Description} \& \textbf{Mitigation} \\ \hline
+  Risque que la préparation du véhicule ne respecte pas les délais & Ce risque peut-être mitigé en ayant un bon suivi de l'avancement et de la construction du véhicule et en offrant de l'aide si nécéssaire. \\ \hline
+  Complexité du domaine d'application & Le domaine de l'application des énegies éoliennes et de la mécanique des fluides est un domaine complexe, ce risque peut être mitigé en ayant les bons renseignements en main. Plusieurs ressources sont disponible, soit à l'intérieur du club étudiant Chinook ou auprès des professeurs spécialisés dans ce domaine.\\ \hline
+  Manque de données & En s'assurant d'obtenir assez de données lors des sorties de banc d'essai, ce risque est facillement évitable.\\ \hline
+  Non fonctionnement de la méthode d'optimisation & Ce risque peut être évité en se renseignant sur l'application et la pertinance de la méthode utilisée. Toutefois, la méthode manuelle de contrôle reste toujours disponible.\\ \hline
+  Complexité du projet & Ce risque peut être évité en se documentant correctement sur les méthodes utilisés et en s'assurant de la compréhension de ces méthodes \\
+\end{tabu}
+  \end{center}
+\end{table}
+
+\subsubsection{Impact, probabilité et exposition aux risques}
+\begin{table}[H]
+  \begin{center}
+    \begin{tabu} to \linewidth {X[3.5,l]|X[0.7,l]|X[1,l]|X[1,l]}
+      \textbf{Risque}          & \textbf{Impact} & \textbf{Probabilité} & \textbf{Exposition} \\ \hline
+      Risque que la préparation du véhicule ne respecte pas les délais & Élevé & Élevé & 0.3734 \\ \hline
+      Complexité du domaine d'application & Moyen & Haut   & 0.1698            \\ \hline
+      Manque de données                   & Haut  & Faible & 0.0679            \\ \hline
+      Non fonctionnement de la méthode d'optimisation & Haut & Faible & 0.0679 \\ \hline
+      Complexité du projet                & Moyen & Bas    & 0.0309            \\
+    \end{tabu}
+  \end{center}
+\end{table}
+
+
+La façon de calculer l'impact des risques et leur probabilités est faite selon la méthode de PÉRIL\footnote{\url{http://msdn.microsoft.com/en-us/magazine/dd315417.aspx}}. Voir les tableaux en [Annexe \ref{annexePERIL}] afin de voir les calculs. 
+
+
 
 % subsection Risques (end)
 % section Planification (end)
